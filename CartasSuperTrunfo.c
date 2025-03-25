@@ -15,8 +15,11 @@ int main() {
       int turismoC01, turismoC02, turismoC03, turismoC04, turismoD01, turismoD02, turismoD03, turismoD04;
       float areaA01, areaA02, areaA03, areaA04, areaB01, areaB02, areaB03, areaB04, areaC01, areaC02, areaC03, areaC04, areaD01, areaD02, areaD03, areaD04;
       float pibA01, pibA02, pibA03, pibA04, pibB01, pibB02, pibB03, pibB04, pibC01, pibC02, pibC03, pibC04, pibD01, pibD02, pibD03, pibD04;
-      
-    
+      float pibpercaptA01, pibpercaptA02, pibpercaptA03, pibpercaptA04, pibpercaptB01, pibpercaptB02, pibpercaptB03, pibpercaptB04;
+      float pibpercaptC01, pibpercaptC02, pibpercaptC03, pibpercaptC04, pibpercaptD01, pibpercaptD02, pibpercaptD03, pibpercaptD04;
+      float densidadeA01, densidadeA02, densidadeA03, densidadeA04, densidadeB01, densidadeB02, densidadeB03, densidadeB04;
+      float densidadeC01, densidadeC02, densidadeC03, densidadeC04, densidadeD01, densidadeD02, densidadeD03, densidadeD04;
+
       printf("digite o nome do estado 1: \n");
       scanf("%s", estado01);
  
@@ -50,22 +53,20 @@ int main() {
       printf("digite a quantidade de pontos turisticos da cidade 2: \n");
       scanf("%d", &turismoA02);
  
+       pibpercaptA01 = pibA01 / populacaoA01;
+       pibpercaptA02 = pibA02 / populacaoA02;
+       densidadeA01 = populacaoA01 / areaA01;
+       densidadeA02 = populacaoA02 / areaA02;
+
+ 
+
+
       printf("nome do estado 1: %s\n", estado01);
       printf("nome da cidadeA01: %s\n", cidadeA01);
-      printf("dados da cidadeA01: população: %d - area: %.2f - pib: %.2f - pontos turisticos %d\n", populacaoA01, areaA01, pibA01, turismoA01);
+      printf("dados da cidadeA01:\n população: %d\n - area: %.2f\n - pib: %.2f\n - pontos turisticos %d\n - densidade populacional: %.2f\n - pib per capita: %.2f\n", populacaoA01, areaA01, pibA01, turismoA01, densidadeA01, pibpercaptA01);
       printf("nome da cidade 02: %s\n", cidadeA02);
-      printf("dados da cidadeA02: população: %d - area: %.2f - pib: %.2f - pontos turisticos %d\n", populacaoA02, areaA02, pibA02, turismoA02);
+      printf("dados da cidadeA02:\n população: %d\n - area: %.2f\n - pib: %.2f\n - pontos turisticos %d\n - densidade populacional: %.2f\n - pib per capita: %.2f\n", populacaoA02, areaA02, pibA02, turismoA02, densidadeA02, pibpercaptA02);
     
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+   
     return 0;
 }
