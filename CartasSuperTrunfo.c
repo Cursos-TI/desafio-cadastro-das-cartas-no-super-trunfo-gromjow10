@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
     char estado01[50], estado02[50], estado03[50], estado04[50]; 
       char cidadeA01[50], cidadeA02[50], cidadeA03[50], cidadeA04[50], cidadeB01[50], cidadeB02[50], cidadeB03[50], cidadeB04[50];
@@ -53,12 +48,14 @@ int main() {
       printf("digite a quantidade de pontos turisticos da cidade 2: \n");
       scanf("%d", &turismoA02);
  
+
+      //calculo da densidade populacional e pib per capita;
+      
        pibpercaptA01 = pibA01 / populacaoA01;
        pibpercaptA02 = pibA02 / populacaoA02;
        densidadeA01 = populacaoA01 / areaA01;
        densidadeA02 = populacaoA02 / areaA02;
 
-       //teste github
 
 
       printf("nome do estado 1: %s\n", estado01);
