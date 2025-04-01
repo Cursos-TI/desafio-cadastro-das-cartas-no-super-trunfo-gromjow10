@@ -12,7 +12,7 @@ int main() {
       float pibA01, pibA02, pibA03, pibA04, pibB01, pibB02, pibB03, pibB04, pibC01, pibC02, pibC03, pibC04, pibD01, pibD02, pibD03, pibD04;
       float pibpercaptA01, pibpercaptA02, pibpercaptA03, pibpercaptA04, pibpercaptB01, pibpercaptB02, pibpercaptB03, pibpercaptB04;
       float pibpercaptC01, pibpercaptC02, pibpercaptC03, pibpercaptC04, pibpercaptD01, pibpercaptD02, pibpercaptD03, pibpercaptD04;
-      float densidadeA01, densidadeA02, densidadeA03, densidadeA04, densidadeB01, densidadeB02, densidadeB03, densidadeB04;
+      float densidadeA01, densidadeA02, densidadeA03, densidadeA04, densidadeB01, densidadeB02, densidadeB03, densidadeB04, superA01, superA02;
       float densidadeC01, densidadeC02, densidadeC03, densidadeC04, densidadeD01, densidadeD02, densidadeD03, densidadeD04;
 
       printf("digite o nome do estado 1: \n");
@@ -55,14 +55,26 @@ int main() {
        pibpercaptA02 = pibA02 / populacaoA02;
        densidadeA01 = populacaoA01 / areaA01;
        densidadeA02 = populacaoA02 / areaA02;
+       superA01 = populacaoA01 + turismoA01 + areaA01 + pibA01 + pibpercaptA01 + 1/densidadeA01;
+       superA02 = populacaoA02 + turismoA02 + areaA02 + pibA02 + pibpercaptA02 + 1/densidadeA02;
 
 
 
-      printf("nome do estado 1: %s\n", estado01);
-      printf("nome da cidadeA01: %s\n", cidadeA01);
-      printf("dados da cidadeA01:\n população: %d\n - area: %.2f\n - pib: %.2f\n - pontos turisticos %d\n - densidade populacional: %.2f\n - pib per capita: %.2f\n", populacaoA01, areaA01, pibA01, turismoA01, densidadeA01, pibpercaptA01);
-      printf("nome da cidade 02: %s\n", cidadeA02);
-      printf("dados da cidadeA02:\n população: %d\n - area: %.2f\n - pib: %.2f\n - pontos turisticos %d\n - densidade populacional: %.2f\n - pib per capita: %.2f\n", populacaoA02, areaA02, pibA02, turismoA02, densidadeA02, pibpercaptA02);
+       printf("nome do estado 1: %s\n", estado01);
+       printf("nome da cidadeA01: %s\n", cidadeA01);
+       printf("dados da cidadeA01:\n população: %d\n - area: %.2f\n - pib: %.2f\n - pontos turisticos %d\n - densidade populacional: %.2f\n - pib per capita: %.2f\n - super poder: %f\n", populacaoA01, areaA01, pibA01, turismoA01, densidadeA01, pibpercaptA01, superA01);
+       printf("nome da cidade 02: %s\n", cidadeA02);
+       printf("dados da cidadeA02:\n população: %d\n - area: %.2f\n - pib: %.2f\n - pontos turisticos %d\n - densidade populacional: %.2f\n - pib per capita: %.2f\n - super poder: %f\n", populacaoA02, areaA02, pibA02, turismoA02, densidadeA02, pibpercaptA02, superA02);
+ 
+       printf("AGORA VAMOS PARA O RESULTADO DA BATALHA ENTRE AS DUAS CIDADES:\n");
+       printf("A população A é a vencedora? %d\n", populacaoA01 > populacaoA02);
+       printf("A area da cidade A é a vencedora? %d\n", areaA01 > areaA02);
+       printf("O pib da cidade A é o vencedor? %d\n", pibA01 > pibA02);
+       printf("OS pontos turisticos da cidade A é vencedor? %d\n", turismoA01 > turismoA02);
+       printf("A Densidade da cidade A é superior? %d\n", densidadeA01 > densidadeA02);
+       printf("O pibpercapta da cidade A é superior? %d\n", pibpercaptA01 > pibpercaptA02);
+       printf("O super poder da cidade A é superior? %d\n", superA01 > superA02);
+
     
    
     return 0;
